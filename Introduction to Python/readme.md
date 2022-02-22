@@ -1,6 +1,6 @@
 ## Program1- Write a Python function that takes a sequence of numbers and determines whether all the numbers are different from each other.
 
-Input : It will take sequence of numbers
+Input : It will take sequence of numbers<br>
 Output : Output will be "YES" if numbers are different from eachother, otherwise "NO"
 
 # Testcases:
@@ -13,7 +13,7 @@ Output : Output will be "YES" if numbers are different from eachother, otherwise
 
 ## Program2 - Write a Python program to add two positive integers without using the '+' operator
 
-Input : It will take numbers
+Input : It will take numbers<br>
 Output : Sum of the given digits
 
 # Testcases:
@@ -26,7 +26,7 @@ Output : Sum of the given digits
 
 ## Program3 - Write a Python program to find common divisors between two numbers in a given pair
 
-Input : two numbers in input
+Input : two numbers in input<br>
 Output : Highest common factor
 
 # Testcases:
@@ -39,7 +39,7 @@ Output : Highest common factor
 
 ## Program4 - Write a Python program to filter(even and odd) a list of integers using Lambda.
 
-Input : list of numbers
+Input : list of numbers<br>
 Output : even and odd lists
 
 # Testcases:
@@ -52,7 +52,7 @@ Output : even and odd lists
 
 ## Program5 - Write a Python program to extract year, month, date and time using Lambda.
 
-Input : current datetime
+Input : current datetime<br>
 Output : year, month, date, time
 
 # Testcases:
