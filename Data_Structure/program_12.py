@@ -1,4 +1,4 @@
-
+#  hot potato game
 import time
 import random
 
