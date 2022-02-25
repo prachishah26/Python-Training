@@ -10,3 +10,4 @@ for i in range(len(numbers)):
         odd_num.append(numbers[i])
 product_of_num = min(odd_num)*max(even_num)
 print(product_of_num)
+

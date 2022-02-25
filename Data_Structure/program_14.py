@@ -1,6 +1,6 @@
 # Add 1 to given list elements. Do not use string conversion.
 
-numbers = [9,9,9]
+numbers = [1,2,3]
 n = len(numbers)
 flag = -1
 for i in range(len(numbers)-1,-1,-1):
