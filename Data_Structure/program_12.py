@@ -2,7 +2,7 @@
 import time
 import random
 
-users = ["prachi", "Aksh", "Praveen", "Kshitij", "Komal", "Vishruti"]
+users = ["prachi", "Aksh", "Praveen", "Kshitij", "Komal", "Vishruti","Dhruvin bhai"]
 n = len(users)
 time_delay = 0
 
