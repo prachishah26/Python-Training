@@ -116,3 +116,61 @@ Output : max sum of sub arrays
 | ----- | ------ |
 | [5, 4, 7, -2, 5, 0, 6, 9, 15, -3] | 49 |
 | [1, 5, 6, 7, 2, 3, 0, 9] | 33 |
+
+
+### Program11- Return product of minimum of odd and maximum of even from a given list.
+
+Input : List of numbers <br>
+Output : product of minimum of odd and maximum of even from a given list
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| [7, 5,  2, 3, 12, 9, 15, 24] | 72 |
+| [1, 2, 3, 4, 5, 6, 7, 8] | 8 |
+
+
+### Program12- Create a simulation program for Hot Potato Game.
+You can develop with your ideas. Just take care of the following things:<br>
+- At least one person must remove from each round.<br>
+- Display name in the console that which user has a hot potato.<br>
+- Each user holds a potato for random seconds between 0.1 to 3.0<br>
+- Each round starts after 3 seconds of the previous elimination.<br>
+- Each round stops at random seconds between 5 to 20.<br>
+- Display the name of the winner.<br>
+
+Input : List of names of players <br>
+Output : winner's name
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| ["Prachi", "Aksh", "Praveen", "Kshitij", "Komal"] | "Winner is Prachi" |
+
+
+### Program13- Return the array which contains the elements which are greater than from its right side
+
+Input : List of numbers <br>
+Output : array which contains the elements which are greater than from its right side
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| [10, 5, 7, 12, 3, 6] | [12, 6] |
+| [5, 17, 2, 6, 3] | [17, 6] |
+
+
+### Program14- # Add 1 to given list elements. Do not use string conversion.
+
+Input : List of numbers <br>
+Output : sum of digits when 1 is add at the last index of array
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| [1, 2, 3] | [1, 2, 4] |
+| [9, 9, 9] | [1, 0, 0, 0] |
