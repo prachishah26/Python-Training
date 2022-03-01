@@ -163,7 +163,7 @@ Output : array which contains the elements which are greater than from its right
 | [5, 17, 2, 6, 3] | [17, 6] |
 
 
-### Program14- # Add 1 to given list elements. Do not use string conversion.
+### Program14- Add 1 to given list elements. Do not use string conversion.
 
 Input : List of numbers <br>
 Output : sum of digits when 1 is add at the last index of array
@@ -174,3 +174,67 @@ Output : sum of digits when 1 is add at the last index of array
 | ----- | ------ |
 | [1, 2, 3] | [1, 2, 4] |
 | [9, 9, 9] | [1, 0, 0, 0] |
+
+
+### Program15- Calculate the sum of the major and minor diagonals of the given matrix
+
+Input : matrix<br>
+Output : sum of the major and minor diagonals of the given matrix
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| [ [2, 0, 7],[4, 1, 9],[8, 1, -1] ] | 2, 16 |
+| [[1, 2], [3, 7]] | 8, 5 |
+
+
+### Program16- Find the elements of the given list which are exactly the same as the entire product of the list except itself
+
+Input : List of numbers<br>
+Output : The number which is equal to product of other numbers
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| [1, 5, 1, 10, 50] | 50 |
+| [1, 2, 2] | 2 |
+
+
+### Program17- Print reverse string using recursion
+
+Input : String<br>
+Output : Reverse string 
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| "helloworld" | "dlrowolleh" |
+| "hello" | "olleh" |
+
+
+### Program18- # Find the majority element of the given list.
+
+Input : list of numbers<br>
+Output : Majority elements of the list
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| [5, 2, 3, 5, 1, 5, 1, 2, 5, 5, 5] | 5 |
+| [1, 2, 2, 2, 2] | 2 |
+
+
+### Program19- Find the overlapping area of two rectangles
+
+Input : coordinates of two rectangles<br>
+Output : overlapping area of two rectangles
+
+#### Testcases:
+
+| Input | Output |
+| ----- | ------ |
+| a = [1, 1], b = [4, 4], c = [2, 2], d = [6, 6] | 4 |
