@@ -14,6 +14,8 @@
 
 
 
+# code is not completed yet-----------------------------------------------------------
+
 l = []
 class users:
     no_of_users = 0
@@ -57,8 +59,8 @@ class user_manager:
             print(arr[user1])
 
     def remove_user():
-        for i in users.no_of_users:
-            
+        pass
+
         
 # test2 = user_manager()
 # test2.add_user()
