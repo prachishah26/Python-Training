@@ -30,8 +30,3 @@ while True:
             raise FormulaError
     except : 
         print("Enter a valid formula !!!")
-       
-
-
-
-
