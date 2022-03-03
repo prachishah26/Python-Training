@@ -18,7 +18,7 @@ class flashcard:
         return value +" (" + meaning + " )"
 
 a = 0
-while user_inp == 0:
+while a == 0:
     value = input("Enter the value : ")
     meaning = input("Enter the meaning : ")
     user_inp= input("Enter 0 if you want to add another flash card : ")
