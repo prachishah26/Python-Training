@@ -3,7 +3,7 @@
 
 # import math
 numbers = [5, 4, 7, -2, 5, 0, 6, 9, 15, -3]
-numbers = [-1,-2,-3,1,2]
+# numbers = [-1,-2,-3,1,2]
 total_max_sum = -1000000
 temp_sum = 0
 
