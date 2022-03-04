@@ -7,7 +7,6 @@
 # salary
 # department
 # post
-
 # Employee manager class
 # Add/Remove Employee, Get all employees list, get employee by his name, get all employees by his/her department,
 # Task:
@@ -74,9 +73,9 @@ while True:
             city = input("Enter your city : ")
             contact_no = int(input("ENter your contact number : "))
             joining_date = input("Enter your joining date in dd-mm-yyyy format : ")
-            salary = int(input("Enter your salary"))
-            department = input("Enter your department")
-            post = input("Enter your post")
+            salary = int(input("Enter your salary : "))
+            department = input("Enter your department : ")
+            post = input("Enter your post : ")
 
             Emp = Employee(name,dob,city,contact_no,joining_date,salary, department, post)
             emp_manager.total_employees.append(Emp)
@@ -101,54 +100,55 @@ while True:
                 key2_pressed = int(input("Enter the number of the operation you want to perform"))
                 if key2_pressed == 1:
                     name_of_employee = input("Enter the name of employee :")
-                    for employee in emp_manager.total_employees:
-                        if employee.name == name_of_employee:
-                            print(f"Employee name : {employee.name}, Employee id :{employee.employee_id},employee department : {employee.department}, employe post : {employee.post}")
-                        else:
-                            print("No such an Employee is existed")
+                    if len(emp_manager.total_employees) != 0:
+                        for employee in emp_manager.total_employees:
+                            if employee.name == name_of_employee:
+                                print(f"Employee name : {employee.name}, Employee id :{employee.employee_id},employee department : {employee.department}, employe post : {employee.post}")
+                    else:
+                        print("No such user existed !!!")
 
                 elif key2_pressed == 2:
                     for employee in emp_manager.total_employees:
-                        if employee.name == name_of_employee:
+                        if employee.department == "fianance":
                             print(f"Employee name : {employee.name}, Employee id :{employee.employee_id},employee department : {employee.department}, employe post : {employee.post}")
                         else:
                             print("No such an Employee is existed")
                 elif key2_pressed == 3:
                     for employee in emp_manager.total_employees:
-                        if employee.name == name_of_employee:
+                        if employee.salary > 50000:
                             print(f"Employee name : {employee.name}, Employee id :{employee.employee_id},employee department : {employee.department}, employe post : {employee.post}")
                         else:
                             print("No such an Employee is existed")
                 elif key2_pressed == 4:
                     for employee in emp_manager.total_employees:
-                        if employee.name == name_of_employee:
+                        if employee.salary > 50000 and employee.salary < 100000:
                             print(f"Employee name : {employee.name}, Employee id :{employee.employee_id},employee department : {employee.department}, employe post : {employee.post}")
                         else:
                             print("No such an Employee is existed")
                 elif key2_pressed == 5:
                     for employee in emp_manager.total_employees:
-                        if employee.name == name_of_employee:
+                        if employee.joining_date[-4:] == "2022":
                             print(f"Employee name : {employee.name}, Employee id :{employee.employee_id},employee department : {employee.department}, employe post : {employee.post}")
                         else:
                             print("No such an Employee is existed")
                 elif key2_pressed == 6:
                     for employee in emp_manager.total_employees:
-                        if employee.name == name_of_employee:
+                        if employee.city == "mirzapur":
                             print(f"Employee name : {employee.name}, Employee id :{employee.employee_id},employee department : {employee.department}, employe post : {employee.post}")
                         else:
                             print("No such an Employee is existed")
 
                 elif key2_pressed == 7:
                     for employee in emp_manager.total_employees:
-                        if employee.name == name_of_employee:
+                        if employee.dob[3:5] == "03":
                             print(f"Employee name : {employee.name}, Employee id :{employee.employee_id},employee department : {employee.department}, employe post : {employee.post}")
                         else:
                             print("No such an Employee is existed")
 
                 elif key2_pressed == 8:
                     emp_manager.total_employees.sort(key = lambda x:x.salary, reverse = True)
-                    for i in emp_manager.total_employees:
-                        print(i.employee_id)
+                    for employee in emp_manager.total_employees:
+                        print(f"employee id : {employee.employee_id},Employee salary : {employee.salary}, Employee name : {employee.name}, Employee department : {employee.department}, employee post : {employee.post} ")
 
                 elif key2_pressed == 9:
                     break
