@@ -42,7 +42,7 @@ class Employee(person):
         self.post = post
         Employee.identity += 1
 
-class Employee_manager():
+class EmployeeManager():
     def __init__(self):
         self.total_employees = []
     def show_employees(self):
@@ -57,7 +57,7 @@ class Employee_manager():
             if employee.employee_id == employee_id:
                 self.total_employees.remove(employee)
 
-emp_manager = Employee_manager()
+emp_manager = EmployeeManager()
 print("\nWelcome !")
 while True:
     try:

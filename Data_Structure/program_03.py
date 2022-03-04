@@ -3,5 +3,5 @@
 # Result: [(2, 1), (1, 2), (2, 3), (4, 4), (2, 5)]
 
 array = [(2, 5), (1, 2), (4, 4), (2, 3), (2, 1)]
-array.sort(key = lambda x : x[1])
+array.sort(key = lambda x : x[1],reverse = True)
 print(array)

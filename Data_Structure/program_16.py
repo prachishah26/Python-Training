@@ -3,11 +3,11 @@
 # A = [1, 2, 4, 8, 1]
 # Ans = 8
 
-array = [1, 5, 1, 10, 50]
-def swap(array,i,j):
-    temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
+numbers = [1, 5, 1, 10, 50]
+def swap(numbers,i,j):
+    temp = numbers[i]
+    numbers[i] = numbers[j]
+    numbers[j] = temp
 
 def sort_array(arr1):
     temp = 0
@@ -18,5 +18,15 @@ def sort_array(arr1):
         temp+= 1
     return arr1
 
-required_num = sort_array(array)[-1]
-print(required_num)
+multiplication = 1
+number = sort_array(numbers)[-1]
+for i in range(0,len(numbers)-1):
+    multiplication *= numbers[i]
+
+if multiplication == numbers[-1] :
+    print(number)
+else:
+    print("No such element exists !!")
+
+# ----------------------------------------------------------------------------------------------
+

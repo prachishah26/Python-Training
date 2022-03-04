@@ -12,20 +12,20 @@ class cards:
         self.suits = suits
         self.values = values
 
-a = cards(suits,values)
+card = cards(suits,values)
 
 class deck:
     def group_cards():
-        for i in range(len(a.suits)):
-            for j in range(len(a.values)):
-                all_cards.append(f'{a.suits[i]}-{a.values[j]}')
+        for i in range(len(card.suits)):
+            for j in range(len(card.values)):
+                all_cards.append(f'{card.suits[i]}-{card.values[j]}')
         return all_cards
 
 
 unique_cards = deck.group_cards()
-arr = []
+list_of_players = []
 class shuffle:
-    def shuffling(a):
+    def shuffling(card):
         for i in range(len(unique_cards)):
             j = random.randint(0,51)
             c = unique_cards[j]
@@ -37,46 +37,41 @@ class shuffle:
         picked_card = random.randint(0,len(unique_cards)-1)
         player_card = unique_cards[picked_card]
         # print("picked card is ",player_card)
-        arr.append(player_card)
+        list_of_players.append(player_card)
         unique_cards.remove(unique_cards[picked_card])
 
 
 # print(shuffle.shuffling(unique_cards))
-p1 = []
-p2 = []
+player1 = []
+player2 = []
 players = shuffle()
 # player2 = shuffle()
 for i in range(10):
     players.pick()
     if i<5:
-        number = arr[i][-1]
-        print("player-1 has ",arr[i])
+        number = list_of_players[i][-1]
+        print("player-1 has ",list_of_players[i])
         if type(number) == str:
             norm_number = abs(ord(number)-100)
-            p1.append(norm_number)
+            player1.append(norm_number)
         # elif type(number) == int:
         #     norm_number = number
-        #     p1.append(norm_number)
+        #     player1.append(norm_number)
     else:
-        number = arr[i][-1]
-        print("player-2 has ",arr[i])
+        number = list_of_players[i][-1]
+        print("player-2 has ",list_of_players[i])
         if type(number) == str:
             norm_number = abs(ord(number)-100)
-            p2.append(norm_number)
+            player2.append(norm_number)
         # elif type(number) == int:
         #     norm_number = number
-        #     p2.append(norm_number)
+        #     player2.append(norm_number)
 
-points_of_p1 = sum(p1)
-points_of_p2 = sum(p2)
+points_of_player1 = sum(player1)
+points_of_player2 = sum(player2)
 
-# print(p1)
-# print(p2)
-if points_of_p1>points_of_p2:
+if points_of_player1>points_of_player2:
     print("Winner is player-1 !!!!!")
 else:
     print("Winner is player-2 !!!!!")
-
-# print(arr)
-
 

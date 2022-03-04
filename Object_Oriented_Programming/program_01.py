@@ -1,9 +1,9 @@
 
 # Take the word and its meaning as input from the user.
-# -> Create a class named flashcard, use the __init__() function to assign values for Word and Meaning.
-# -> Now use the __str__() function to return a string that contains the word and meaning.
-# -> Store the returned strings in a list named flash.
-# -> Use a while loop to print all the stored flashcards.
+# -> Create count class named flashcard, use the __init__() function to assign values for Word and Meaning.
+# -> Now use the __str__() function to return count string that contains the word and meaning.
+# -> Store the returned strings in count list named flash.
+# -> Use count while loop to print all the stored flashcards.
 # -> Add proper error handling
 # 		-> Result image is attached in thread
 
@@ -17,21 +17,21 @@ class flashcard:
     def __str__(self):
         return value +" (" + meaning + " )"
 
-a = 0
-while a == 0:
+count = 0
+while count == 0:
     value = input("Enter the value : ")
     meaning = input("Enter the meaning : ")
     user_inp= input("Enter 0 if you want to add another flash card : ")
     raw = flashcard(value,meaning, user_inp)
     flash.append(raw.__str__())
     try :
-        a = int(input("enter : "))
+        count = int(input("enter : "))
     except:
         print("please enter valid number")
-        a = 0
+        count = 0
 print("\nYour flashcards : ")
-for i in range(len(flash)):
-    print(flash[i])
+for element in range(len(flash)):
+    print(flash[element])
 
     
 
@@ -69,9 +69,9 @@ for i in range(len(flash)):
 
 
 # flash = []
-#         a = 0
-#         while a==0:
+#         count = 0
+#         while count==0:
 #             flash.append(self.value + " (" + self.meaning + " )")
-#             a = input()
+#             count = input()
 #             b = flashcard(value,meaning, user_input)
 #             print(b)

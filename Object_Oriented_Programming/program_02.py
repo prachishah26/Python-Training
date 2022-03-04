@@ -2,7 +2,7 @@
 # ->  Animal => Wild => Leopard, Tiger
 # 	=> Pet => Dog
 # 	=> Canine => Fox
-# -> Each class contains two methods to get a name and info. Get the name returns the name of that animal and get the info returns hierarchy.
+# -> Each class contains two methods to get dog name and info. Get the name returns the name of that animal and get the info returns hierarchy.
 # For example,
 # print(dog.get_name())  ⇒ My name is Tommy
 # print(dog.get_info())  ⇒  I am Dog. I am Pet. I am Animal
@@ -62,13 +62,13 @@ class Fox(Canine):
         return f"I am Fox. {Canine.get_info(self)}" 
 
 
-a = Dog("n")
-print(a.get_name())
+dog = Dog("n")
+print(dog.get_name())
 
 
-a = Leopard("xyz")
-print(a.get_name())
-print(a.get_info())
+dog = Leopard("xyz")
+print(dog.get_name())
+print(dog.get_info())
 
 
 
