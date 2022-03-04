@@ -25,7 +25,7 @@ for f in filenames:
             lines.append(line)
 
 lines.sort(key = lambda x:int(x[0]) )
-print(lines)
+# print(lines)
 
 for i in range(len(lines)):
     with open("que_ans.txt","w") as qs:
