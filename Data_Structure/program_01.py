@@ -1,9 +1,10 @@
 # Slice list into 3 equal chunks and reverse each chunk
 
 raw_list =  [11, 45, 8, 23, 14, 12, 78, 45, 89, 1, 2]
+raw_list = [1,2,3,4,5,6,7,8,9]
 new_raw_list = []
-n = 3
-parts_of_rawdata = 4
+n = 5
+parts_of_rawdata = 3
 
 
 for i in range(n):
