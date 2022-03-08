@@ -11,7 +11,7 @@ vehicle_obj = Vehicle("prachi","engine","price")
 
 # object to json
 json_converted = json.dumps(vehicle_obj.__dict__)
-print(json_converted)
+# print(json_converted)
 
 
 with open("file.json", "w") as s:
