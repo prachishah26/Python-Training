@@ -9,5 +9,17 @@ class Vehicle:
 vehicle_obj = Vehicle("prachi","engine","price") 
 # print(vehicle_obj.name)
 
+# object to json
 json_converted = json.dumps(vehicle_obj.__dict__)
 print(json_converted)
+
+
+with open("file.json", "w") as s:
+	json.dump(json_converted, s)
+
+
+
+# json to python object
+with open("file.json", "r") as read:
+	data = json.load(read)
+print(data)
