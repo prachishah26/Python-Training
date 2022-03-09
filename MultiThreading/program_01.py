@@ -23,18 +23,18 @@ def square_of_numbers(result):
 
 if __name__ == "__main__":
     # creating the thread
-    t1 = threading.Thread(target=square_of_numbers, args=(result,))
-    t2 = threading.Thread(target=cube_of_numbers, args=(result,))
+    thread1 = threading.Thread(target=square_of_numbers, args=(result,))
+    thread2 = threading.Thread(target=cube_of_numbers, args=(result,))
 
-    # starting thread t1
-    t1.start()
-    # starting thread t2
-    t2.start()
+    # starting thread thread1
+    thread1.start()
+    # starting thread thread2
+    thread2.start()
 
-    # wait until t1 is completed
-    t1.join()
-    # wait until t2 is completed
-    t2.join()
+    # wait until thread1 is completed
+    thread1.join()
+    # wait until thread2 is completed
+    thread2.join()
 
     # both threads completed
     print("Done!") 
