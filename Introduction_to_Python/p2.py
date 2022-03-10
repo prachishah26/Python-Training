@@ -6,5 +6,4 @@ while b!= 0:
     value = a & b
     a = a^b
     b = value << 1
-
 print(a)
