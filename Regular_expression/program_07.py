@@ -7,7 +7,7 @@
 # took 22
 
 import re
-from typing import final
+
 str = "area not a _a2_ roar took 22"
 elements_of_str = str.split(" ")
 final_string = ""

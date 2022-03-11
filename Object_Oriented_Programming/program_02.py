@@ -33,7 +33,7 @@ class Tiger(Wild):
     def get_name(self):
         return "My name is " + self.name
     def get_info(self):
-        return "I am Tiger. {Wild.get_info(self)}"
+        return f"I am Tiger. {Wild.get_info(self)}"
 
 class Pet(Animal):
     def get_name(self):
