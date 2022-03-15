@@ -1,6 +1,6 @@
 # Check if the given number is prime or not
 import math
-number = 5
+number = 7
 n = 2
 def prime(number,n):
     if number == 1 :
@@ -15,8 +15,7 @@ def prime(number,n):
             
 print(prime(number,n))
 
-
-
+# print(5%0)
 
 
 
