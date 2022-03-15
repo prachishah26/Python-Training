@@ -5,16 +5,16 @@
 # 1. What is your name?
 # 2. Where are you from?
 # Sample file: answer.txt:
-# 	2. India
-# 	1. Bob
-# 	3. Swimming
+# 2. India
+# 1. Bob
+# 3. Swimming
 # Output file:
 # 1. What is your name?
 # Bob
 # 2. Where are you from?
-# 	India
-# 	3. What is your Hobby?
-# 	Swimming
+# India
+# 3. What is your Hobby?
+# Swimming
 
 
 filenames = ["que.txt","ans.txt"]
