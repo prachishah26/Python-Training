@@ -16,13 +16,13 @@ print(nums_greater_than_right)
 
 # ===============================second_method==============================
 
-greater_nums = []
-greater_nums.append(numbers[len(numbers)-1])
-for i in range(len(numbers)-2,-1,-1):
-    if numbers[i] > greater_nums[0]:
-        greater_nums.insert(0,numbers[i])
+# greater_nums = []
+# greater_nums.append(numbers[len(numbers)-1])
+# for i in range(len(numbers)-2,-1,-1):
+#     if numbers[i] > greater_nums[0]:
+#         greater_nums.insert(0,numbers[i])
 
-print(greater_nums)
+# print(greater_nums)
 
 
     
