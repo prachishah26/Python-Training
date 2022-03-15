@@ -21,6 +21,7 @@ Details of all toyota car's details
 ```
 ### Program5- Count total car per company
 ```
+e.g.
 toyota           32
 nissan           18
 mazda            17
@@ -48,7 +49,7 @@ mercury           1
 ### Program6- Find each company’s Highest price car
 
 ```
-WE have to find each company's highest price car.
+We have to find each company's highest price car.
 e.g.
 make
 alfa-romero      16500.0
