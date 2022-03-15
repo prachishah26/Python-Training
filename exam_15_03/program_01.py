@@ -6,7 +6,7 @@ a='10589'
 while(len(a)>1):
 # print(len(a))
     for i in a:
-        sum = sum + int(i)
+        sum = int(sum) + int(i)
         # print(sum)
     a = str(sum)
 print(a)
