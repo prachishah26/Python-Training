@@ -3,22 +3,22 @@
 import pandas as pd
 
 from datetime import datetime
-df = pd.read_csv('ufo.csv')
+data = pd.read_csv('ufo.csv')
 
 
 
-df['Date_time'] = df['Date_time'].str.replace("24:00","00:00")
-df['Date_time'] = pd.to_datetime(df['Date_time'])
+data['Date_time'] = data['Date_time'].str.replace("24:00","00:00")
+data['Date_time'] = pd.to_datetime(data['Date_time'])
 print("top raws of Original Dataframe:")
-print(df.head())
+print(data.head())
 print("\nlast date of Ufo dataset:")
-print(df.Date_time.max())
+print(data.Date_time.max())
 print("\nfirst date of Ufo dataset:")
-print(df.Date_time.min())
+print(data.Date_time.min())
 
 # ------------------from input from user-------------------
 
 date = pd.to_datetime(input('Input date in yyyy-mm-dd format'))
-total_days_between_ufo_seen = df[df['Date_time']>date]
+total_days_between_ufo_seen = data[data['Date_time']<date]
 print(total_days_between_ufo_seen)
 print("Days are : ",total_days_between_ufo_seen.Date_time.count())
