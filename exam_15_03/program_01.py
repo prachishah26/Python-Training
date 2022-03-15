@@ -3,6 +3,7 @@
 # number = 10589
 
 a='10589'
+
 while(len(a)>1):
 # print(len(a))
     for i in a:
