@@ -3,6 +3,9 @@
 numbers = [1,2,3,4,5,21,65]
 length_of_number = len(numbers)
 def reverse_numbers(numbers):
+    """
+    This function will reverse the list of numbers 
+    """
     for index in range(len(numbers)):
             if index < (length_of_number/2):
                 numbers[index], numbers[length_of_number-index-1] = numbers[length_of_number-index-1], numbers[index]
