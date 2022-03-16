@@ -6,11 +6,11 @@ import re
 # from typing import final
 data = ['{{apple-150}}', '{{mango2-100}}', '{{cherry-200', 'grape-87']
 final_list=[]
-for i in range(len(data)):
-    x = re.findall(r"{{[a-z]*-[0-9]*}}|\b[a-z]*-[0-9]*\b",data[i])
-    if x:
-        if len(x[0]) == len(data[i]):
-            final_list.append(x[0])
+for index in range(len(data)):
+    match = re.findall(r"{{[a-z]*-[0-9]*}}|\b[a-z]*-[0-9]*\b",data[index])
+    if match:
+        if len(match[0]) == len(data[index]):
+            final_list.append(match[0])
 
 
 print(final_list)

@@ -5,16 +5,20 @@
 array = [1,0,2,2,0,1,0,1,2,0,0]
 
 def swap(array,i,j):
-    temp = array[i]
-    array[i] = array[j]
-    array[j] = temp
+    """
+    This function will swap two variables
+    """
+    array[i],array[j] = array[j],array[i]
 
-def sort_array(arr1):
-    temp = 0
-    while(temp < len(arr1)-1):
-        if(arr1[temp]>arr1[temp+1]):
-            swap(arr1,temp,temp+1)
-            temp = -1 
-        temp+= 1
-    return arr1
+def sort_array(list_of_numbers):
+    '''
+    This function will sort the array
+    '''
+    temporary_number = 0
+    while(temporary_number < len(list_of_numbers)-1):
+        if(list_of_numbers[temporary_number]>list_of_numbers[temporary_number+1]):
+            swap(list_of_numbers,temporary_number,temporary_number+1)
+            temporary_number = -1 
+        temporary_number+= 1
+    return list_of_numbers
 print(sort_array(array))

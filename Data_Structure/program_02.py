@@ -6,8 +6,8 @@ numbers = [11, 45, 8, 11, 23, 45, 23, 45, 89]
 numbers_set = set(numbers)
 new_numbers = list(numbers_set)
 numbers_dict = dict()
-for i in range(len(new_numbers)):
-    numbers_dict[new_numbers[i]] = numbers.count(new_numbers[i])
+for itr in range(len(new_numbers)):
+    numbers_dict[new_numbers[itr]] = numbers.count(new_numbers[itr])
 print(numbers_dict)
 
 
@@ -16,11 +16,11 @@ print(numbers_dict)
 numbers = [11, 45, 8, 11, 23, 45, 23, 45, 89]
 numbers_set = set(numbers)
 numbers_dict = dict()
-for i in numbers:
-    if i not in numbers_dict.keys():
-        numbers_dict[i] = 1
+for itr in numbers:
+    if itr not in numbers_dict.keys():
+        numbers_dict[itr] = 1
     else:
-        j = numbers_dict[i]
-        numbers_dict[i] = j+1
+        j = numbers_dict[itr]
+        numbers_dict[itr] = j+1
 
 print(numbers_dict)

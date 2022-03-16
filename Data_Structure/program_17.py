@@ -1,12 +1,12 @@
 # Print reverse string using recursion
 
-A = "helloworld"
+raw_string = "helloworld"
 
-n = len(A)
-def rev_str(A, n):
-    n -= 1
-    if n == 0:
-        return A[n]
-    return A[n] + rev_str(A,n) 
+length_of_rawstring = len(raw_string)
+def rev_str(raw_string, length_of_rawstring):
+    length_of_rawstring -= 1
+    if length_of_rawstring == 0:
+        return raw_string[length_of_rawstring]
+    return raw_string[length_of_rawstring] + rev_str(raw_string,length_of_rawstring) 
 
-print(rev_str(A,n))
+print(rev_str(raw_string,length_of_rawstring))

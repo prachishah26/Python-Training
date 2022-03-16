@@ -4,24 +4,22 @@
 # Ans = 8
 
 numbers = [1, 5, 1, 10, 50]
-def swap(numbers,i,j):
-    temp = numbers[i]
-    numbers[i] = numbers[j]
-    numbers[j] = temp
+def swap(numbers,index,j):
+    numbers[index],numbers[j] = numbers[j],numbers[index]
 
-def sort_array(arr1):
-    temp = 0
-    while(temp < len(arr1)-1):
-        if(arr1[temp]>arr1[temp+1]):
-            swap(arr1,temp,temp+1)
-            temp = -1 
-        temp+= 1
-    return arr1
+def sort_array(list_of_numbers):
+    temporary_number = 0
+    while(temporary_number < len(list_of_numbers)-1):
+        if(list_of_numbers[temporary_number]>list_of_numbers[temporary_number+1]):
+            swap(list_of_numbers,temporary_number,temporary_number+1)
+            temporary_number = -1 
+        temporary_number+= 1
+    return list_of_numbers
 
 multiplication = 1
 number = sort_array(numbers)[-1]
-for i in range(0,len(numbers)-1):
-    multiplication *= numbers[i]
+for index in range(0,len(numbers)-1):
+    multiplication *= numbers[index]
 
 if multiplication == numbers[-1] :
     print(number)

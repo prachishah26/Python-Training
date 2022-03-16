@@ -15,7 +15,7 @@ def prime(number,n):
             
 print(prime(number,n))
 
-# print(5%0)
+
 
 
 

@@ -14,19 +14,19 @@ class FormulaError(Exception):
     pass
 
 while True:
-    inp =  input("enter your expression : ").split()
+    user_input =  input("enter your expression : ").split()
     try:
-        if "quit" in inp and len(inp)==1:
+        if "quit" in user_input and len(user_input)==1:
             break
             
-        if len(inp) == 3 and (inp[1] == "+" or inp[1] == "-" ):
-            a = float(inp[0])
-            b = float(inp[2])
-            if inp[1] == "+":
-                print("result is ", a+b)
-            elif inp[1] == "-":
-                print("result is ", a-b)
+        if len(user_input) == 3 and (user_input[1] == "+" or user_input[1] == "-" ):
+            user_input1 = float(user_input[0])
+            user_input2 = float(user_input[2])
+            if user_input[1] == "+":
+                print("result is ", user_input1+user_input2)
+            elif user_input[1] == "-":
+                print("result is ", user_input1-user_input2)
         else:
             raise FormulaError
     except : 
-        print("Enter a valid formula !!!")
+        print("Enter  valid formula !!!")

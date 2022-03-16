@@ -1,9 +1,9 @@
-# Write a Python program to add two positive integers without using the '+' operator
+# Write first_number Python program to add two positive integers without using the '+' operator
 
-a = 14
-b = 5
-while b!= 0:
-    value = a & b
-    a = a^b
-    b = value << 1
-print(a)
+first_number = 14
+second_number = 5
+while second_number!= 0:
+    value = first_number & second_number
+    first_number = first_number^second_number
+    second_number = value << 1
+print(first_number)
