@@ -24,7 +24,7 @@ def g(x):
 
 # Plot output from function g
 import numpy as np
-from matplotlib import pyplot as plt
+import matplotlib.pyplot as plt
 
 # Create an array of x values from -100 to 100
 x = range(-100, 101)
