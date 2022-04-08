@@ -8,10 +8,10 @@
 # ====================  step -1 checking if two line segments intercects or not ======================
 
 import numpy as np
-p1 = np.array([1,2])
-q1 = np.array([6,4])
-p2 = np.array([3,5])
-q2 = np.array([8,1])
+p1 = np.array([15,25])
+q1 = np.array([15,15])
+p2 = np.array([15,10])
+q2 = np.array([100000,10])
 
 # orientation for non colinear points---------------------
 
@@ -43,9 +43,9 @@ def Intersect(p1,q1,p2,q2):
         return "Intersecting"
     if b == 0 and PointsOnLineSegment(p1,q2,q1) == 1:
         return "Intersecting"
-    if c == 0 and PointsOnLineSegment(p1,p1,q2) == 1:
+    if c == 0 and PointsOnLineSegment(p2,p1,q2) == 1:
         return "Intersecting"
-    if c == 0 and PointsOnLineSegment(p2,q2,q1) == 1:
+    if c == 0 and PointsOnLineSegment(p2,q1,q2) == 1:
         return "Intersecting"
     if a != b and c != d:
         return "Intersecting"
@@ -58,7 +58,7 @@ print(Intersect(p1,q1,p2,q2))
 
 # ============================  step - 2 finding intercecting poing  ===================================
 
-import numpy as np
+# import numpy as np
 
 # p1 = np.array([1,2])
 # q1 = np.array([6,4])
@@ -85,10 +85,15 @@ import numpy as np
 # q2 = np.array([3,3])
 # p2 = np.array([6,6])
 
-p1 = np.array([4,4])
-q1 = np.array([5,5])
-q2 = np.array([7,7])
-p2 = np.array([8,8])
+# p1 = np.array([4,4])
+# q1 = np.array([5,5])
+# q2 = np.array([7,7])
+# p2 = np.array([8,8])
+
+# p1 = np.array([10,20])
+# q1 = np.array([15,10])
+# p2 = np.array([20,10])
+# q2 = np.array([-10,10])
 
 r = q1 - p1  #magnitude of vector
 print(r)

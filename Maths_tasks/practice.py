@@ -44,3 +44,14 @@ def Intersect(p1,q1,p2,q2):
     return "Not Intersecting"
 
 print(Intersect(p1,q1,p2,q2)) 
+
+
+
+starting_point1 = np.array([1,1])
+ending_point1 = np.array([100000,1])
+
+
+starting_point2 = np.array([0,0])
+ending_point2 = np.array([5, 5])
+
+print(Intersect(starting_point1,ending_point1,starting_point2,ending_point2))
