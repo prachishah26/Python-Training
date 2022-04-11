@@ -1,12 +1,13 @@
+
 import numpy as np
 import math
+import time
 np.seterr(divide='ignore', invalid='ignore')
 
 def intersecting(p1,q1,p2,q2):
     """
     This function will give the intersecting points between two line segments.
     """
-
     intersecting_points = []
     p1 = np.array(p1)
     q1 = np.array(q1)
@@ -55,7 +56,7 @@ def intersecting(p1,q1,p2,q2):
                     if p1 not in intersecting_points:
                         intersecting_points.append(p1)
     return intersecting_points
-
+   
 def intersecting_points_polygon(polygon1, polygon2):
     """
     This function will give intersecting points of two polygon.
@@ -92,7 +93,7 @@ def intersecting_points_polygon(polygon1, polygon2):
                     t0 = np.dot((p2-p1),r)/np.dot(r,r)
                     t1 = np.dot((p2 + s - p1),r)/np.dot(r,r)
                 
-                except Exception as e:
+                except ZeroDivisionError as e:
                         pass
                 else:
                     if np.cross(r,s) != 0 and t >= 0 and t <= 1 and u >= 0 and u <= 1:
@@ -101,6 +102,7 @@ def intersecting_points_polygon(polygon1, polygon2):
                         if list(point) not in intersecting_points:
                             intersecting_points.append(list(point))
 
+                    #for colinear points
                     if np.cross(r,s) == 0 and np.cross((p2-p1),r) == 0 :
                         if (t0<=1 and t0 >=0) or (t1<=1 and t1 >=0) :
                             # print("Lines are colinear and overlapping")
@@ -129,14 +131,53 @@ def intersecting_points_polygon(polygon1, polygon2):
             line.clear()
     return intersecting_points
 
+def swap(array,i,j):
+    """
+    This function will swap two variables
+    """
+    array[i],array[j] = array[j],array[i]
+
+def finding_angles(intersecting_points):
+    """
+    This function will find the angles of all the coordinates with respect to one point. 
+    """
+    angles = []
+    for index in range(len(intersecting_points)):
+        starting_point = intersecting_points[0]
+        theta = math.degrees(math.atan2((intersecting_points[index][1] - starting_point[1]),(intersecting_points[index][0] - starting_point[0])))
+        angles.append(theta)
+    return angles
+
+def find_area(points_of_polygon):
+    """
+    This function will find the area of polygon
+    """
+    determinant = 0
+    for index in range(len(points_of_polygon)-1):
+        determinant += (points_of_polygon[index][0]*points_of_polygon[index+1][1]) - (points_of_polygon[index][1]*points_of_polygon[index+1][0])
+    area = 0.5 * determinant
+    return area
+
 polygon1 = [[-10, 30], [10, 20], [15, 10], [-20, 10],[-10, 30]]
 polygon2 = [[-20, 25], [15, 25], [15, 15], [-20, 20],[-20, 25]]
 
+# polygon1 = [[-10,30],[-5,35],[10,20],[15, 10],[-20,10],[-20,20],[-10,30]]
+# polygon2 = [[-25,25],[-20,30],[-5,35],[15,25],[15,20],[-30,20],[-25,25]]
+
+# polygon1 = [[-10,30],[10,20],[15,10],[-20,10],[-10,30]]
+# polygon2 = [[20,25],[15,25],[15,15],[20,20],[20,25]]
+
 intersecting_points = intersecting_points_polygon(polygon1, polygon2)
 
+# polygon1 = [[-10,30],[-5,35],[10,20],[15, 10],[-20,10],[-20,20],[-10,30]]
+# polygon2 = [[-25,25],[-20,30],[-5,35],[15,25],[15,20],[-30,20]]
 
 polygon2 = [[-10, 30], [10, 20], [15, 10], [-20, 10]]
 polygon1 = [[-20, 25], [15, 25], [15, 15], [-20, 20],[-20,25]]
+
+# polygon1 = [[-10,30],[10,20],[15,10],[-20,10],[-10,30]]
+# polygon2 = [[20,25],[15,25],[15,15],[20,20]]
+
 my_list = []
 count1 = 0 
 count2 = 0
@@ -150,51 +191,41 @@ for i in range(len(polygon2)):
 
     for j in range(len(polygon1)-1):
 
-
         if intersecting(polygon1[j],polygon1[j+1],point_x1,point_x2)  :
             count1 += 1
             # my_list.append(point_x1)
         if intersecting(polygon1[j],polygon1[j+1],point_y1,point_y2)  :
             count2 += 1
         if count1 and count2:
-            if list(point_x1) not in my_list:
-                my_list.append(list(point_x1))
+            if point_x1 not in my_list:
+                my_list.append(point_x1)
     count1 = 0
     count2 = 0
 
-
-intersecting_points.append(my_list[0])
-angles = []
-
-for index in range(len(intersecting_points)):
-    starting_point = intersecting_points[0]
-    theta = math.degrees(math.atan2((intersecting_points[index][1] - starting_point[1]),(intersecting_points[index][0] - starting_point[0])))
-    angles.append(theta)
-
-def swap(array,i,j):
-    """
-    This function will swap two variables
-    """
-    array[i],array[j] = array[j],array[i]
-
+for i in range(len(my_list)):
+    intersecting_points.append(my_list[i])
 
 #sorting angles---------------------------------------------
+
+angles = finding_angles(intersecting_points)
 temporary_number = 0
+starting_time = time.time()
+print("--",angles)
 while(temporary_number < len(angles)-1):
     if(angles[temporary_number]>angles[temporary_number+1]):
         swap(angles,temporary_number,temporary_number+1)
         swap(intersecting_points,temporary_number,temporary_number+1)
         temporary_number = -1 
     temporary_number+= 1
-
+print(time.time() - starting_time)
 
 
 #finding area of overlapping polygon------------------------
-points2 = intersecting_points.append(intersecting_points[0])
 
-determinant = 0
-for index in range(len(intersecting_points)-1):
-    determinant += (intersecting_points[index][0]*intersecting_points[index+1][1]) - (intersecting_points[index][1]*intersecting_points[index+1][0])
-    
-area = 0.5 * determinant
-print(area)
+intersecting_points.append(intersecting_points[0])
+if len(intersecting_points) == 0:
+    print("No overlapping")
+else:
+    print(find_area(intersecting_points))
+
+
